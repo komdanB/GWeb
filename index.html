@@ -1,1 +1,37 @@
-index html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <header>
+            <h1>Gardener website</h1>
+            <button class="button-as-link" onclick="clearCanvas()">Clear canvas</button>
+            <button class="primary-button" onclick="exportImage()">Export image</button>
+        </header>
+
+        <div class="card_body">
+            <aside>
+                <label>Tiles</label>
+                <div class="tileset-container">
+                    <img width=32px heigth=32px id="tileset-source" src="/images/plant_foto.png">
+                    <div class="tileset-container_selection"></div>
+                </div>
+            </aside>
+
+            <div class="card_right-column">
+                <canvas width="500" height="500"></canvas>
+
+                <p class="instructions">
+                    <strong>Click</strong> to place your garden objects <br>
+                    <strong>Shift+Click</strong> to remove objects
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
