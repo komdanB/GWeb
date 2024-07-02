@@ -1,0 +1,64 @@
+WORKING WITH THE .ACTIVE CSS PROPERTY
+PROBLEM: ONLY ADDING BORDER WHEN ACTIVELY CLICKING ON THE IMAGE
+
+// var tiles = document.querySelectorAll('.tileset-container');
+
+// tiles.forEach(function (tile) {
+//     tile.addEventListener('click', function () {
+//         // Check if the clicked tile already has the 'active' class
+//         var isActive = this.classList.contains('active');
+
+//         // Remove 'active' class from all tiles
+//         tiles.forEach(function (tile) {
+//             tile.classList.remove('active');
+//         });
+
+//         // If the clicked tile was not active, add 'active' class to it
+//         if (!isActive) {
+//             this.classList.add('active');
+//         }
+//     });
+// });
+
+WORKING WITH CSS AS A STRING IN THE JAVASCRIPT CODE, NOT REALLY CONVENIENT
+PROBLEM: EASIER TO ADD A CUSTOM STYLE IN THE CSS FILE BY WORKING WITH classList
+
+// function clearBorders() {
+//     imageIds.forEach(function (imageId) {
+//         var element = document.getElementById(imageId);
+//         if (element) {
+//             element.style.border = "none";
+//         }
+//     });
+// }
+
+// function mark(imageId) {
+
+//     // all borders cleared
+//     clearBorders();
+
+//     var element = document.getElementById(imageId);
+//     if (element) {
+//         element.style.border = "1px solid black";
+//         element.style.borderRadius = "5px";
+//         element.style.boxShadow = "5px"
+//     } else {
+//         console.error('Element with ID "' + imageId + '" not found.');
+//     }
+// }
+
+// function assignClickHandler(imageId) {
+//     var element = document.getElementById(imageId);
+//     if (element) {
+//         // we dont need to instantiate the e object passed in with function
+//         // the browser will handle that for us apparently 
+//         element.onclick = function (e) {
+//             mark(imageId);
+//         }
+//     } else {
+//         console.error('Element with ID "' + imageId + '" not found.');
+//     }
+// }
+
+// imageIds.forEach(assignClickHandler);
+
